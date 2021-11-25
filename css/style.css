@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+}
+#my-todo-app {
+  width: 100%;
+  padding: 10px 40px;
+  text-align: center;
+}
+.header {
+  background-color: gray;
+  padding: 30px 40px;
+}
+.header h1 {
+  color: blue;
+  padding-bottom: 10px;
+  font-size: 25px;
+}
+input {
+  width: 75%;
+  padding: 5px;
+  border: none;
+  outline: none;
+}
+.btn {
+  padding: 5px 8px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+#myUl {
+  margin-top: 20px;
+  background-color: #555;
+}
+.underList {
+  padding: 20px;
+
+  list-style-type: none;
+}
+ul li {
+  font-size: 25px;
+  margin-bottom: 5px;
+
+  padding: 5px;
+}
+
+ul li:nth-child(odd) {
+  background-color: darkkhaki;
+}
+
+.checked {
+  text-decoration: line-through;
+  background-color: slategrey;
+  color: beige;
+}
+.fa-check {
+  color: #2ecc71;
+  padding: 1px 3px;
+  margin-right: 25px;
+}
+.fa-check:hover {
+  background-color: beige;
+}
+
+.fa-times {
+  color: #e74c3c;
+  padding: 1px 3px;
+  margin-left: 25px;
+}
+.fa-times:hover {
+  background-color: beige;
+}
