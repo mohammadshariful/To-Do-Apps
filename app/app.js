@@ -18,6 +18,7 @@ function addItems(e) {
     //functional work
 
     let createList = document.createElement("li");
+    createList.className = 'checked' // Added a Class Name for simplicity manager your CURD Operation
     //for check
     let span1 = document.createElement("span");
     span1.className = "fas fa-check";
@@ -36,10 +37,35 @@ function addItems(e) {
 }
 //close item
 
-let close = document.querySelectorAll(".fa-times");
-close.forEach((value, index) => {
-  close[index].addEventListener("click", removeLi);
-  function removeLi() {
-    console.log(value);
+// let close = document.querySelectorAll(".fa-times");
+// close.forEach((value, index) => {
+//   close[index].addEventListener("click", removeLi);
+//   function removeLi() {
+//     console.log(value);
+//   }
+// });
+
+
+
+// Solved 
+let close = document.querySelector(".underList"); // Edit
+
+close.addEventListener('click', function (event) {
+  // contains mains = যদি আমার parent - এর ভিতরে ক্লিক করা হয় তাহলে আমি true or false return করব।
+  // example
+  console.log(this.contains(event.target)) // ul  এর যেখানে ক্লিক করবেন সেই খানটাই দেখাবে?
+  // আমি নিচে কিছু লজিক লিখে delegation টা আটকিয়েছি।
+
+  // এটা অন্য ভাবেও করা যাবে আপনি এখানে যে ভাবে প্লেনিং করেছেন সেটা এই লজিক দিয়েই বেস্ট। 
+
+// line number 21 add code see
+
+  // সমস্যা থাকলে আমাকে বলবেন।
+  if (this.contains(event.target)) {
+    if ([...event.target.classList].includes('checked')) {
+      event.target.remove()
+    }else if ([...event.target.classList].includes('fa-times')) {
+      console.log(event.target.parentElement.remove())
+    }
   }
-});
+})
